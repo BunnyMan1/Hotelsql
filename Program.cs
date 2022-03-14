@@ -1,6 +1,15 @@
+using Hotelsql.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
+// https://stackoverflow.com/q/69961449/10856516
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 // Add services to the container.
+builder.Services.AddTransient<IGuestRepository, GuestRepository>();
+builder.Services.AddTransient<IRoomRepository, RoomRepository>();
+builder.Services.AddTransient<IStaffRepository, StaffRepository>();
+builder.Services.AddTransient<IScheduleRepository, ScheduleRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

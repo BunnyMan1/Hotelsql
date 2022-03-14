@@ -4,7 +4,7 @@ using Hotelsql.Models;
 namespace Hotelsql.Controllers;
 
 [ApiController]
-[Route("api/guest")]
+[Route("api/staff")]
 public class StaffController : ControllerBase
 {
     private readonly ILogger<StaffController> _logger;
@@ -14,33 +14,33 @@ public class StaffController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet]
-    public async Task<ActionResult> GetList()
-    {
+    // [HttpGet]
+    // public async Task<ActionResult> GetList()
+    // {
 
-    }
+    // }
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult> GetById([FromRoute] int id)
-    {
+    // [HttpGet("{id}")]
+    // public async Task<ActionResult> GetById([FromRoute] int id)
+    // {
 
-    }
+    // }
 
-    [HttpPost]
-    public async Task<ActionResult> Create([FromRoute] int id)
-    {
+    // [HttpPost]
+    // public async Task<ActionResult> Create([FromRoute] int id)
+    // {
 
-    }
+    // }
 
-    [HttpPut("{id}")]
-    public async Task<ActionResult> Update([FromRoute] int id)
-    {
+    // [HttpPut("{id}")]
+    // public async Task<ActionResult> Update([FromRoute] int id)
+    // {
 
-    }
+    // }
 
-    [HttpDelete("{id}")]
-    public async Task<ActionResult> Delete([FromRoute] int id)
-    {
+    // [HttpDelete("{id}")]
+    // public async Task<ActionResult> Delete([FromRoute] int id)
+    // {
 
-    }
+    // }
 }

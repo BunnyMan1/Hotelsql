@@ -1,3 +1,5 @@
+using Hotelsql.DTOs;
+
 namespace Hotelsql.Models;
 
 public record Schedule
@@ -10,4 +12,13 @@ public record Schedule
     public DateTimeOffset CreatedAt { get; set; }
     public int GuestId { get; set; }
     public int RoomId { get; set; }
+
+    public ScheduleDTO asDto => new ScheduleDTO
+    {
+        CheckIn = CheckIn,
+        CheckOut = CheckOut,
+        GuestCount = GuestCount,
+        Id = Id,
+        Price = Price,
+    };
 }
